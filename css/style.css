@@ -6,7 +6,7 @@ body{
 .header{
   display:flex;
   justify-content:space-between;
-  padding:20px 200px;
+  padding:20px 180px;
   background-color: #1f2937;
   align-items: center;
 }
@@ -23,4 +23,47 @@ body{
 .header-links a{
   text-decoration: none;
   color:#fff;
+}
+
+.content-1{
+  background-color: #1f2937;
+  display:flex;
+  padding:100px 180px;
+  gap:20px;
+  align-items: center;
+}
+
+.img-content-1{
+  display:flex;
+  width: 50%;
+}
+
+.container-content-1-left{
+  width: 50%;
+  display:flex;
+  flex-direction: column;
+  gap:15px;
+  align-items: flex-start;
+}
+.main-title{
+  font-size:48px;
+  font-weight: extra-bold;
+  color: #f9faf8;
+}
+
+.main-description{
+  font-size: 18px;
+  color:#e5e7eb;
+}
+
+.main-signup{
+  text-decoration: none;
+  color: #fff;
+  background-color: #3882F6;
+  padding: 8px 15px;
+  border-radius: 6px;
+}
+
+.img-content-1 img{
+  width: 100%;
 }
