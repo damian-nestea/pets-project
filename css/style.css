@@ -121,3 +121,27 @@ body{
 .description-content-2{
   text-align: center;
 }
+
+/* quote section */
+
+.quote-content{
+  display: flex;
+  flex-direction: column;
+  padding: 100px 180px 100px  180px;
+  background-color: #e5e7eb;
+  gap:15px;
+}
+
+.quote{
+  font-size: 36px;
+  font-weight:lighter;
+  font-style: italic;
+  color: #1f2937;
+}
+
+.author{
+  font-size: 28px;
+  align-self: flex-end;
+  margin-right: 40px;
+  font-weight: bold;
+}
