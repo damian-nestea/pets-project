@@ -127,7 +127,7 @@ body{
 .quote-content{
   display: flex;
   flex-direction: column;
-  padding: 100px 180px 100px  180px;
+  padding: 100px 300px 100px  300px;
   background-color: #e5e7eb;
   gap:15px;
 }
@@ -142,6 +142,43 @@ body{
 .author{
   font-size: 28px;
   align-self: flex-end;
-  margin-right: 40px;
+  margin-right: 20px;
   font-weight: bold;
+}
+
+/* sign up section */
+.signup-section{
+  display:flex;
+  padding: 90px 200px;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-banner{
+  background-color: #3882F6;
+  padding: 50px 110px;
+  border-radius: 8px;
+  display:flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap:100px
+}
+
+.signup-banner a{
+  text-decoration: none;
+  border:2px solid #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color:#fff;
+}
+
+.signup-main-text{
+  font-size: 26px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.signup-text{
+  color:#fff;
+  font-size: 16px;
 }
