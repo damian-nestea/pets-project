@@ -12,7 +12,7 @@
 
 body {
   font-size: 1.6rem;
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /* styling the header*/
@@ -200,5 +200,3 @@ footer {
   color: #fff;
   font-size: 16px;
 }
-
-
