@@ -46,13 +46,17 @@ nav ul li a {
   font-size: clamp(1.4rem, 0.8rem + 1vw, 2rem);
 }
 
+#app {
+  min-height: 70vh;
+}
+
 /* footer */
 footer {
   display: flex;
   align-items: center;
   justify-content: center;
 
-  height: 15vh;
+  height: 10vh;
 
   font-size: clamp(1.4rem, 0.8rem + 1vw, 2rem);
   background-color: #1f2937;
@@ -127,7 +131,8 @@ footer {
 /* content with photos above the main content */
 
 #middle-home-section,
-#section-media-cards {
+#section-media-cards,
+#contact-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -136,11 +141,12 @@ footer {
   padding: 4rem 2rem;
 }
 #middle-home-section h2,
-#section-media-cards h2 {
+#section-media-cards h2,
+#contact-section form legend {
   color: #1f2937;
   text-align: center;
   font-size: clamp(2rem, 1.2rem + 2vw, 4.8rem);
-  font-weight: extra-bold;
+  font-weight: bold;
 }
 
 .gallery {
@@ -163,7 +169,7 @@ footer {
   border: 2px solid #3882f6;
   border-radius: 0.6rem;
 
-  box-shadow:1px 1px 8px 0px rgba(0, 0, 0, 0.4); 
+  box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.4);
 }
 
 .card-wrapper p {
@@ -245,7 +251,7 @@ footer {
 #up-section-media {
   background-color: #1f2937;
 
-  padding:0 2rem 2rem;
+  padding: 0 2rem 2rem;
 
   display: grid;
   justify-items: center;
@@ -258,10 +264,10 @@ footer {
   border-radius: 0.6rem;
 }
 
-.pet-cards-wrapper{
+.pet-cards-wrapper {
   width: 100%;
 
-  display:flex;
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
@@ -269,8 +275,8 @@ footer {
   gap: 2rem;
 }
 
-.pet-card{
-  display:flex;
+.pet-card {
+  display: flex;
   flex-direction: column;
   align-items: center;
 
@@ -279,12 +285,12 @@ footer {
   width: 25rem;
 
   border-radius: 0.6rem;
-  padding:1.5rem;
+  padding: 1.5rem;
 
-  box-shadow:1px 1px 8px 0px rgba(0, 0, 0, 0.4); 
+  box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.4);
 }
 
-.pet-card img{
+.pet-card img {
   width: 8rem;
 
   margin-bottom: 1rem;
@@ -292,16 +298,117 @@ footer {
   border-radius: 50%;
 }
 
-.pet-card h3, .pet-card p{
-  color:#1f2937
+.pet-card h3,
+.pet-card p {
+  color: #1f2937;
 }
 
-.pet-card h3{
+.pet-card h3 {
   margin-bottom: 0.6rem;
 
   font-size: clamp(1.6rem, 1rem + 2vw, 2.8rem);
 }
 
-.pet-card p{
+.pet-card p {
   font-size: clamp(1.2rem, 0.8rem + 1vw, 1.6rem);
+}
+
+/* Contact Page */
+#contact-section {
+  display: grid;
+  gap:6rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form legend {
+  margin-bottom: 2rem;
+}
+
+form .input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+
+  margin-bottom: 1.5rem;
+}
+
+form .input-wrapper label {
+  color: #1f2937;
+  font-size: clamp(1.2rem, 0.8rem + 1vw, 1.6rem);
+  font-style: italic;
+}
+
+form .input-wrapper input,
+form .input-wrapper textarea,
+form .input-wrapper button {
+  width: 100%;
+
+  font-family: "Roboto", sans-serif;
+  font-size: clamp(1.2rem, 0.8rem + 1vw, 1.8rem);
+}
+
+form .input-wrapper input,
+form .input-wrapper textarea {
+  padding: 0.5rem;
+  border: 1px solid #1f2937;
+  border-radius: 0.6rem;
+}
+
+form .input-wrapper textarea {
+  height: 10rem;
+
+  resize: vertical;
+}
+
+form .input-wrapper input:focus,
+form .input-wrapper textarea:focus {
+  outline: 1px solid #3882f6;
+  border: none;
+}
+
+form button {
+  color: #fff;
+  background-color: #3882f6;
+  font-weight: bold;
+
+  padding: 0.8rem 1.6rem;
+  border-radius: 0.6rem;
+  border: none;
+
+  cursor: pointer;
+}
+
+#social-media-container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  color: #1f2937;
+  font-size: clamp(1.6rem, 1rem + 2vw, 2.8rem);  
+  text-align: center;
+
+  background-color: #d5d7db;
+
+  padding: 2rem 2rem 0;
+  border-radius: 1rem;
+}
+
+#social-media-container ul {
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#social-media-container ul li {
+  list-style: none;
+  padding: 0.5rem;
+}
+
+#social-media-container img{
+  width: 4rem;
 }
