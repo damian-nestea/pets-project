@@ -259,7 +259,7 @@ footer {
 }
 
 #up-section-media img {
-  width: 100%;
+  width: 70%;
 
   border-radius: 0.6rem;
 }
@@ -316,7 +316,7 @@ footer {
 /* Contact Page */
 #contact-section {
   display: grid;
-  gap:6rem;
+  gap: 6rem;
 }
 
 form {
@@ -382,24 +382,25 @@ form button {
   cursor: pointer;
 }
 
-#social-media-container{
-  display:flex;
+#social-media-container {
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
 
   color: #1f2937;
-  font-size: clamp(1.6rem, 1rem + 2vw, 2.8rem);  
+  font-size: clamp(1.6rem, 1rem + 2vw, 2.8rem);
   text-align: center;
 
   background-color: #d5d7db;
 
   padding: 2rem 2rem 0;
   border-radius: 1rem;
+  box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.4);
 }
 
 #social-media-container ul {
-  display:flex;
+  display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -409,6 +410,39 @@ form button {
   padding: 0.5rem;
 }
 
-#social-media-container img{
+#social-media-container img {
   width: 4rem;
+}
+
+@media (min-width: 700px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding-inline: 8rem;
+  }
+
+  #up-section,
+  #middle-home-section,
+  #section-media-cards,
+  #quote-section,
+  #contact-section,
+  #up-section-media {
+    padding-inline: 8rem;
+  }
+
+  #down-section {
+    padding: 6rem 8rem;
+  }
+
+  #cta-banner {
+    padding: 3rem 6rem;
+    border-radius: 0.6rem;
+  }
+
+  #up-section-media img {
+    width: 50%;
+  }
+
+ 
 }
