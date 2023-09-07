@@ -131,8 +131,7 @@ footer {
 /* content with photos above the main content */
 
 #middle-home-section,
-#section-media-cards,
-#contact-section {
+#section-media-cards {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -315,6 +314,8 @@ footer {
 
 /* Contact Page */
 #contact-section {
+  padding: 4rem 2rem;
+
   display: grid;
   gap: 6rem;
 }
@@ -344,7 +345,7 @@ form .input-wrapper label {
 
 form .input-wrapper input,
 form .input-wrapper textarea,
-form .input-wrapper button {
+form button {
   width: 100%;
 
   font-family: "Roboto", sans-serif;
@@ -389,7 +390,7 @@ form button {
   gap: 2rem;
 
   color: #1f2937;
-  font-size: clamp(1.6rem, 1rem + 2vw, 2.8rem);
+  font-size: clamp(1.2rem, 1rem + 2vw, 2.8rem);
   text-align: center;
 
   background-color: #d5d7db;
@@ -443,6 +444,41 @@ form button {
   #up-section-media img {
     width: 50%;
   }
+}
 
- 
+@media (min-width: 900px) {
+  header,
+  #up-section,
+  #middle-home-section,
+  #section-media-cards,
+  #quote-section,
+  #contact-section,
+  #up-section-media {
+    padding-inline: 15rem;
+  }
+
+  #middle-home-section,
+  #section-media-cards,
+  #contact-section {
+    gap: 4rem;
+  }
+
+  .gallery {
+    justify-content: space-evenly;
+  }
+
+  #down-section {
+    padding: 8rem 25rem;
+  }
+}
+@media (min-width: 1100px) {
+  #contact-section {
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+  }
+
+  #contact-section form,
+  #contact-section #social-media-container {
+    width: 80%;
+  }
 }
