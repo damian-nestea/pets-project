@@ -472,6 +472,74 @@ form button {
   }
 }
 @media (min-width: 1100px) {
+  #up-section {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "a b";
+    align-items: center;
+
+    padding-block: 4rem;
+  }
+
+  #about {
+    grid-area: a;
+
+    margin: 0;
+
+    align-items: flex-start;
+  }
+
+  #up-section h1,
+  #up-section-media h1,
+  #up-section p,
+  #up-section-media p {
+    text-align: left;
+  }
+
+  #up-section img {
+    grid-area: b;
+  }
+
+  #up-section-media {
+    grid-template-rows: repeat(2, 1fr) 12rem;
+    grid-template-columns: max-content 1fr;
+    grid-template-areas: "a b" "a c" "a d";
+
+    align-items: center;
+
+    padding-bottom: 6rem;
+  }
+
+  #up-section-media img {
+    object-fit: contain;
+    overflow: hidden;
+
+    width: 70%;
+    max-height: 60rem;
+    grid-area: a;
+  }
+
+  #up-section-media h1 {
+    align-self: flex-end;
+  }
+
+  #up-section-media p {
+    max-width: 70rem;
+
+    align-self: flex-end;
+  }
+
+  #up-section-media a {
+    align-self: flex-start;
+  }
+
+  .pet-cards-wrapper {
+    justify-content: space-evenly;
+  }
+
+  .pet-card img{
+    width: 14rem;
+  }
+
   #contact-section {
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
@@ -480,5 +548,44 @@ form button {
   #contact-section form,
   #contact-section #social-media-container {
     width: 80%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #cta-banner {
+    max-width: 75%;
+
+    padding:5rem 10rem;
+    margin: 0 auto;
+
+    grid-template-columns: 1fr max-content;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "a b" "c b";
+    row-gap: 0.5rem;
+
+    
+  }
+
+  #cta-banner h3,
+  #cta-banner p {
+    justify-self:flex-start;
+  }
+
+  #cta-banner h3 {
+    grid-area: a;
+
+    align-self: flex-end;
+  }
+
+  #cta-banner p {
+    grid-area: c;
+
+    align-self: flex-start;
+  }
+
+  #cta-banner a {
+    grid-area: b;
+
+    align-self: center;
   }
 }
