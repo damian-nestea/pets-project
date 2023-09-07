@@ -27,8 +27,21 @@ header {
   padding: 4rem 2rem;
 }
 
+header #logo,
+header nav {
+  --startX: 0%;
+  --startY: -100%;
+  animation: entrance 0.6s ease-in;
+}
+
 #logo {
-  width: 100px;
+  width: 10rem;
+
+  cursor: pointer;
+}
+
+#logo:hover {
+  transform: scale(1.1);
 }
 
 nav ul {
@@ -61,6 +74,10 @@ footer {
   font-size: clamp(1.4rem, 0.8rem + 1vw, 2rem);
   background-color: #1f2937;
   color: #fff;
+
+  --startX: 0%;
+  --startY: 200%;
+  animation: entrance 0.6s ease-in;
 }
 
 /* HOME PAGE */
@@ -83,6 +100,26 @@ footer {
   border-radius: 0.6rem;
 
   grid-area: a;
+}
+
+#logo,
+#main-photo,
+.card-wrapper img,
+#up-section-media img,
+.pet-card img,
+#social-media-container img,
+#cta-banner {
+  transition: 0.6s ease-in;
+}
+
+#main-photo:hover,
+.card-wrapper img:hover,
+#up-section-media img:hover,
+.pet-card img:hover,
+#social-media-container img:hover,
+#cta-banner:hover {
+  filter: hue-rotate(5deg) contrast(101%) saturate(200%);
+  transform: scale(1.01);
 }
 
 #about {
@@ -126,6 +163,14 @@ footer {
 
   padding: 0.8rem 1.6rem;
   border-radius: 0.6rem;
+
+  transition: 0.6s ease-in;
+}
+
+.signup-btn:hover,
+#up-section-media a:hover {
+  background-color: #fff;
+  color: #3882f6;
 }
 
 /* content with photos above the main content */
@@ -238,6 +283,13 @@ footer {
 
   color: #fff;
   text-decoration: none;
+
+  transition: 0.6s ease-in;
+}
+
+#cta-banner a:hover {
+  background-color: #fff;
+  color: #3882f6;
 }
 
 #cta-banner h3,
@@ -287,6 +339,12 @@ footer {
   padding: 1.5rem;
 
   box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.4);
+
+  transition: 0.6s ease-in;
+}
+
+.pet-card:hover {
+  transform: scale(1.1);
 }
 
 .pet-card img {
@@ -381,6 +439,15 @@ form button {
   border: none;
 
   cursor: pointer;
+
+  transition: 0.6s ease-in;
+}
+
+form button:hover {
+  background-color: #fff;
+  color: #3882f6;
+
+  border: 1px solid #3882f6;
 }
 
 #social-media-container {
@@ -398,6 +465,12 @@ form button {
   padding: 2rem 2rem 0;
   border-radius: 1rem;
   box-shadow: 1px 1px 8px 0px rgba(0, 0, 0, 0.4);
+
+  transition: 0.6s ease-in;
+}
+
+#social-media-container:hover {
+  transform: scale(1.1);
 }
 
 #social-media-container ul {
@@ -413,6 +486,28 @@ form button {
 
 #social-media-container img {
   width: 4rem;
+}
+
+#up-section *,
+#middle-home-section,
+#quote-section *,
+#cta-banner,
+#up-section-media *,
+#section-media-cards *,
+#contact-section * {
+  --startX: 0%;
+  --startY: -20%;
+  animation: entrance 0.6s ease-in;
+}
+
+@keyframes entrance {
+  from {
+    opacity: 0;
+    transform: translate(var(--startX), var(--startY));
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media (min-width: 700px) {
@@ -536,7 +631,7 @@ form button {
     justify-content: space-evenly;
   }
 
-  .pet-card img{
+  .pet-card img {
     width: 14rem;
   }
 
@@ -552,23 +647,25 @@ form button {
 }
 
 @media (min-width: 1200px) {
+  #logo {
+    width: 15rem;
+  }
+
   #cta-banner {
     max-width: 75%;
 
-    padding:5rem 10rem;
+    padding: 5rem 10rem;
     margin: 0 auto;
 
     grid-template-columns: 1fr max-content;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "a b" "c b";
     row-gap: 0.5rem;
-
-    
   }
 
   #cta-banner h3,
   #cta-banner p {
-    justify-self:flex-start;
+    justify-self: flex-start;
   }
 
   #cta-banner h3 {
