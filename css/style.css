@@ -34,6 +34,11 @@ header nav {
   animation: entrance 0.6s ease-in;
 }
 
+.active-link{
+  font-weight: bolder;
+  text-shadow: 1px 1px 1px whitesmoke;
+}
+
 #logo {
   width: 10rem;
 

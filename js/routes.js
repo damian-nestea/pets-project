@@ -1,3 +1,5 @@
+import { activateLink } from "./actions.js";
+
 export class Router {
   routes = {};
 
@@ -22,6 +24,7 @@ export class Router {
       .then((data) => data.text())
       .then((htmlCode) => {
         document.getElementById("app").innerHTML = htmlCode;
+        activateLink(pathname);
       });
   }
 }
